@@ -218,4 +218,21 @@
     border-radius: 0.25rem;
     padding: 2px 0.25rem;
   }
+
+  /* reduce the browser default inline padding for lists and nested lists */
+  menu,
+  ol,
+  ul {
+    padding-left: var(--first-level-space);
+  }
+
+  /* remove browser-default inline margin for <dd> and insert fluid padding */
+  dd {
+    margin: 0;
+    padding-left: var(--first-level-space);
+  }
+
+  :is(menu, ol, ul) :is(menu, ol, ul) {
+    padding-left: var(--second-level-space);
+  }
 }
