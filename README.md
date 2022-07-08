@@ -11,3 +11,11 @@ project is intended to be used for the following browser engines and web browser
 - Gecko: Firefox Stable and ESR
 - Blink: Chromium Stable, qt5-webengine browsers like qutebrowser
 - WebKit: Safari Desktop, Safari iOS, webkit2gtk browsers like luakit and Epiphany
+
+## TODO
+
+- switch to [CSS logical properties][1] whenever they get their own [shorthand logical syntax][2]
+  and browser wide support for them becomes available
+
+[1]: https://caniuse.com/css-logical-props
+[2]: https://github.com/w3c/csswg-drafts/issues/1282
