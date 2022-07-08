@@ -235,4 +235,27 @@
   :is(menu, ol, ul) :is(menu, ol, ul) {
     padding-left: var(--second-level-space);
   }
+
+  /* if font-weight of 600 isn't available, a higher font weight (most likely
+   * bold) should automatically be selected
+   * to maintain visual consistency, add equivalent margin to dt even if a
+   * hyperlink isn't present */
+  dt {
+    font-weight: 600;
+    margin: 0.75rem;
+  }
+
+  /* add padding to links inside <dt>
+   * add negative margins, i.e., eat away the margins added to <dt> in case
+   * <dt> has a hyperlink to avoid adding both margin and padding */
+  dt > a {
+    display: inline-block;
+    margin: -0.75rem 0 -0.75rem -0.75rem;
+    padding: 0.75rem;
+  }
+
+  /* consecutive <dt>'s shouldn't have padding for hyperlinks overlapping */
+  dt + dt > a {
+    padding-top: 0;
+  }
 }
