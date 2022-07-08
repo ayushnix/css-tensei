@@ -74,3 +74,20 @@
   --fg-ins: #114a1b; /* green, Lc 89.6 */
   --fg-del: #7d0800; /* red, Lc 89.3 */
 }
+
+@media (prefers-color-scheme: light) and (prefers-contrast: less) {
+  :root {
+    --bg-main: #fbf3db; /* light yellow */
+    --fg-text: #445559; /* grey, Lc 80 */
+    --fg-head: #4e6166; /* grey, Lc 75.2 */
+    --bg-mark: #f9fb71; /* yellow */
+    --fg-mark: #445559; /* grey, Lc 80.6 */
+    --fg-border: #94b5bf; /* light grey, Lc 35.9 */
+    --fg-link: #005dab; /* blue, Lc 75.1 */
+    --fg-link-underline: #005dab80;
+    --fg-link-visited: #004578; /* dark blue, Lc 85.3 */
+    --fg-link-visited-underline: #00457880;
+    --fg-ins: #366900; /* green, Lc 75.3 */
+    --fg-del: #ad2022; /* red, Lc 75.5 */
+  }
+}
