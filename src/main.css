@@ -183,4 +183,12 @@
       padding: 0 8px;
     }
   }
+
+  /* change color of headings to reduce halation possibilities */
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--fg-head);
+  }
 }
