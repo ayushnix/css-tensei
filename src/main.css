@@ -91,3 +91,37 @@
     --fg-del: #ad2022; /* red, Lc 75.5 */
   }
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-main: #1c1d1d; /* black */
+    --fg-text: #e6e6e6; /* white, Lc -90 */
+    --fg-head: #d6d6d6; /* grey, Lc -80.1, reduce contrast of headings to prevent halation */
+    --bg-mark: #7d3300; /* dark yellow */
+    --fg-mark: #f9faf1; /* white, Lc -90.4 */
+    --fg-border: #7a7a7a; /* grey, Lc -30.3, deliberately reduce contrast in dark mode */
+    --fg-link: #f3e6ac; /* light yellow, Lc -89.7 */
+    --fg-link-underline: #f3e6ac80;
+    --fg-link-visited: #f1cb5a; /* dark yellow, Lc -75.8 */
+    --fg-link-visited-underline: #f1cb5a80;
+    --fg-ins: #c9ecff; /* blue, Lc -90.4 */
+    --fg-del: #ffd0c8; /* light red, Lc -83 */
+  }
+
+  @media (prefers-contrast: less) {
+    :root {
+      --bg-main: #333;
+      --fg-text: #ddd; /* Lc -80.2 */
+      --fg-head: #d5d5d5; /* Lc -75.2 */
+      --bg-mark: #80421a; /* dark yellow */
+      --fg-mark: #eee; /* Lc -80.1 */
+      --fg-border: #828285; /* Lc -30 */
+      --fg-link: #f6d8b7; /* Lc -80 */
+      --fg-link-underline: #f6d8b780;
+      --fg-link-visited: #d1c39f; /* Lc -65 */
+      --fg-link-visited-underline: #d1c39f80;
+      --fg-ins: #b5e4ff; /* Lc -80.4 */
+      --fg-del: #ffc8c2; /* Lc -75.2 */
+    }
+  }
+}
