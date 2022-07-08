@@ -125,3 +125,32 @@
     }
   }
 }
+
+/* RULES THAT ARE SPECIFIC TO SCREEN ONLY */
+@media screen {
+  /* switch to border-box instead of content-box to make box size, margins, and
+   * padding more intuitive */
+  html {
+    box-sizing: border-box;
+    font: var(--base-font-size) / var(--height-text) var(--sans-font);
+    overflow-y: scroll;
+  }
+
+  /* if scrollbar-gutter is supported, use it instead of adding a permanent
+   * visible scrollbar */
+  @supports (scrollbar-gutter: stable both-edges) {
+    html {
+      overflow-y: auto;
+      scrollbar-gutter: stable both-edges;
+    }
+  }
+
+  /* all elements should inherit the box-sizing property so that child elements
+   * can easily inherit the box-sizing value of their parents if they differ
+   * from the box-sizing set in html {} */
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+}
