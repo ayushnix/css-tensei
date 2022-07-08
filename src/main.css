@@ -153,4 +153,34 @@
   *::after {
     box-sizing: inherit;
   }
+
+  /* use `overflow-wrap: auto` instead of `hyphens: auto` on larger screens
+   * which don't need automatic hyphenation
+   * add a padding of 24px on either inline side to reserve space at the screen
+   * edge; we've used pixels to avoid scaling the padding and reducing available
+   * content width area */
+  body {
+    background-color: var(--bg-main);
+    color: var(--fg-text);
+    overflow-wrap: break-word;
+    padding: 0 24px;
+  }
+
+  /* handheld touch devices with smaller screens should have automatic
+   * hyphenation to justify paragraphs */
+  @media (max-width: 48rem) {
+    body {
+      /* stylelint-disable-next-line property-no-vendor-prefix */
+      -webkit-hyphens: auto;
+      hyphens: auto;
+    }
+  }
+
+  /* reduce inline padding on touch devices with a relatively small viewport to
+   * make room for content */
+  @media (max-width: 20rem) {
+    body {
+      padding: 0 8px;
+    }
+  }
 }
