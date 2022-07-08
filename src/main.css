@@ -202,13 +202,20 @@
    * although this issue can be fixed by making `pre > code` a block element,
    * it will mess up :focus-visible outline and keyboard navigation
    *
-   * this issue isn't visible in Chromium but it is visible in Firefox and WebKit
-   * browsers like Epiphany
+   * this issue isn't visible in Chromium but it is visible in Firefox and
+   * WebKit browsers like Epiphany
    * https://bugzilla.mozilla.org/show_bug.cgi?id=1700858 */
   pre {
     border: 1px solid var(--fg-border);
     border-radius: 0.25rem;
     overflow-x: auto;
     padding: 0.5rem;
+  }
+
+  /* add borders and padding to inline monospace elements */
+  :is(p, li, dd, dt) > :is(code, ins, del, samp, var) {
+    border: 1px solid var(--fg-border);
+    border-radius: 0.25rem;
+    padding: 2px 0.25rem;
   }
 }
