@@ -258,4 +258,9 @@
   dt + dt > a {
     padding-top: 0;
   }
+
+  /* indicate that <summary> is a clickable element */
+  summary {
+    cursor: pointer;
+  }
 }
