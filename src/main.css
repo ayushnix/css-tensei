@@ -129,9 +129,12 @@
 /* RULES THAT ARE SPECIFIC TO SCREEN ONLY */
 @media screen {
   /* switch to border-box instead of content-box to make box size, margins, and
-   * padding more intuitive */
+   * padding more intuitive
+   * the color-scheme property should ideally be defined in HTML but we'll
+   * still define it here in case it isn't defined in HTML */
   html {
     box-sizing: border-box;
+    color-scheme: light;
     font: var(--base-font-size) / var(--height-text) var(--sans-font);
     overflow-y: scroll;
   }
@@ -142,6 +145,14 @@
     html {
       overflow-y: auto;
       scrollbar-gutter: stable both-edges;
+    }
+  }
+
+  /* input elements and other light theme elements should get dark colors in
+   * dark mode */
+  @media (prefers-color-scheme: dark) {
+    html {
+      color-scheme: dark;
     }
   }
 
