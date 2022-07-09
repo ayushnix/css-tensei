@@ -324,4 +324,12 @@
     background-color: var(--bg-print);
     color: var(--fg-print);
   }
+
+  a:link {
+    color: var(--fg-print);
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
 }
