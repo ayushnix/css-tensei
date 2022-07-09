@@ -286,4 +286,15 @@
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
+
+  /* remove the unnecessary inline margin from figure */
+  figure {
+    margin-inline: 0;
+  }
+
+  /* differentiate a figcaption from regular body text */
+  figcaption {
+    font-style: italic;
+    text-align: center;
+  }
 }
