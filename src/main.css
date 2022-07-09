@@ -259,9 +259,31 @@
     padding-top: 0;
   }
 
-  /* indicate that <summary> is a clickable element */
+  /* indicate that <summary> is a clickable element
+   * we're assuming that <summary> will be an immediate child element of
+   * <details> although this isn't strictly required */
   summary {
     cursor: pointer;
     padding: 0.75rem 0.5rem;
+  }
+
+  /* add a border around <details> when it's closed */
+  details {
+    border: 1px solid var(--fg-border);
+    border-radius: 0.25rem;
+  }
+
+  /* when <details> is open, add a block border to <summary> */
+  details[open] > summary {
+    border-bottom: 1px solid var(--fg-border);
+  }
+
+  /* according to whatwg HTML spec, <details> can contain "flow content"
+   * elements which includes many inline elements like <a> and <em>
+   * we'll account for a few commonly used block elements without an inherent
+   * inline padding or margin and add inline padding to them */
+  details[open] > :is(article, aside, div, figure, footer, header, nav, p, section) {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 }
