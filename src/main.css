@@ -19,6 +19,8 @@
    * reduce line-height of headings to account for their increased font size */
   --height-text: 1.6;
   --height-head: 1.2;
+  --height-text-print: 1.3;
+  --height-head-print: 1.1;
 
   /* start increasing the base font size of 16px (1rem) from a 390px width
    * viewport to a maximum of 18px (1.125rem) ending at 1024px width viewport
@@ -73,6 +75,8 @@
   --fg-link-visited-underline: #00339780; /* reduce opacity for underlines to improve readability */
   --fg-ins: #114a1b; /* green, Lc 89.6 */
   --fg-del: #7d0800; /* red, Lc 89.3 */
+  --bg-print: #fff;
+  --fg-print: #000;
 }
 
 @media (prefers-color-scheme: light) and (prefers-contrast: less) {
@@ -307,5 +311,17 @@
   figcaption {
     font-style: italic;
     text-align: center;
+  }
+}
+
+/* OVERRIDES AND RULES THAT ARE SPECIFIC TO PRINT ONLY */
+@media print {
+  html {
+    font: 100% / var(--height-text-print) var(--serif-font);
+  }
+
+  body {
+    background-color: var(--bg-print);
+    color: var(--fg-print);
   }
 }
