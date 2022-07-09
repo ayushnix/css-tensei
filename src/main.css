@@ -314,6 +314,24 @@
   }
 }
 
+/* RULES THAT ARE COMMON TO BOTH SCREEN AND PRINT */
+
+/* manually apply monospace font stack to prevent some browsers from reducing
+ * the size of monospace HTML tags
+ *
+ * the address and time tag has been given a monospace font to eliminate
+ * mistakes due to ambiguous characters like O, 0, 1, l, I */
+address,
+code,
+kbd,
+pre,
+pre span,
+samp,
+time,
+var {
+  font-family: var(--mono-font);
+}
+
 /* OVERRIDES AND RULES THAT ARE SPECIFIC TO PRINT ONLY */
 @media print {
   html {
