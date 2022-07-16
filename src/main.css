@@ -352,6 +352,33 @@
   hr {
     color: var(--fg-border);
   }
+
+  /* we're not applying styles to a {} because we don't want to style a {}
+   * without href
+   * the order of pseudo classes for hyperlinks should follow LVHA (:link,
+   * :visited, :hover, and :active) order as specified on MDN
+   * text-decoration shorthand hasn't been used deliberately because of its
+   * messy support in web browsers */
+  a:link {
+    color: var(--fg-link);
+    text-decoration-line: underline;
+    text-decoration-color: var(--fg-link-underline);
+    text-decoration-style: solid;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.25em;
+  }
+
+  a:visited {
+    color: var(--fg-link-visited);
+    text-decoration-color: var(--fg-link-visited-underline);
+  }
+
+  /* there's little point styling a:hover because it won't be visible on touch
+   * devices and there's already mouse pointer to hover with on a desktop */
+  a:active {
+    color: var(--fg-link-visited);
+    text-decoration-color: var(--fg-link-visited);
+  }
 }
 
 /* RULES THAT ARE COMMON TO BOTH SCREEN AND PRINT */
