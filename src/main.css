@@ -221,7 +221,7 @@
 
   /* make superscripts and subscripts with hyperlink children easier to tap */
   :is(sub, sup) > a {
-    padding: 0.25em;
+    padding: 0.5em;
   }
 
   /* the code snippet inside preformatted text does not obey padding-inline-end
