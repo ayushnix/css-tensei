@@ -306,7 +306,7 @@
   }
 
   /* according to whatwg HTML spec, <details> can contain "flow content"
-   * elements which includes many inline elements like <a> and <em>
+   * elements which includes many inline elements like <a> and <em>.
    * we'll account for a few commonly used block elements without an inherent
    * inline padding or margin and add inline padding to them */
   details[open] > :is(article, aside, div, figure, footer, header, nav, p, section) {
@@ -345,6 +345,12 @@
   /* <del> text shouldn't be mistaken for <s> */
   del {
     color: var(--fg-del);
+  }
+
+  /* compared to firefox, chromium's implementation of <hr> in light mode seems
+   * broken; the line is a bit too thin */
+  hr {
+    color: var(--fg-border);
   }
 }
 
