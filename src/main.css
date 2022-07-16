@@ -324,6 +324,28 @@
     font-style: italic;
     text-align: center;
   }
+
+  mark {
+    background-color: var(--bg-mark);
+    color: var(--fg-mark);
+  }
+
+  kbd {
+    border: 2px outset var(--fg-border);
+    padding: 2px 0.25rem;
+  }
+
+  /* <ins> shouldn't be mistaken for a hyperlink */
+  ins {
+    color: var(--fg-ins);
+    font-style: italic;
+    text-decoration: none;
+  }
+
+  /* <del> text shouldn't be mistaken for <s> */
+  del {
+    color: var(--fg-del);
+  }
 }
 
 /* RULES THAT ARE COMMON TO BOTH SCREEN AND PRINT */
