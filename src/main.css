@@ -61,8 +61,10 @@
    * when clicking on links. the colors are also perceptually uniform in the
    * CIELAB color space.
    *
-   * the default light and dark theme tries to comply with the preferred Lc
-   * value of 90 for body text, Lc 75 for bold text, and Lc 30 for borders */
+   * the default light and dark theme try to have Lc >=90 for body text, Lc
+   * >=90 for headings text, and Lc 40 for borders
+   * if a lower contrast theme is selected, Lc is >=80 for body text, Lc >=75
+   * for headings, and Lc >=30 for borders
   --bg-main: #f8f8f8; /* white */
   --fg-text: #282828; /* black, Lc 97.4 */
   --fg-head: #3f3f3f; /* black, Lc 90.3, reduce contrast of headings to prevent halation */
@@ -152,8 +154,9 @@
     }
   }
 
-  /* input elements and other light theme elements should get dark colors in
-   * dark mode */
+  /* input elements and other light theme elements should get default dark
+   * colors in dark mode, also useful if we missed any elements that should've
+   * been styled in dark mode but weren't */
   @media (prefers-color-scheme: dark) {
     html {
       color-scheme: dark;
@@ -187,7 +190,7 @@
     background-color: var(--bg-main);
     color: var(--fg-text);
     overflow-wrap: break-word;
-    padding: 0 24px;
+    padding: 0 16px;
   }
 
   /* handheld touch devices with smaller screens should have automatic
