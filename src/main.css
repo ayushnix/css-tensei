@@ -360,6 +360,7 @@
    * :visited, :hover, and :active) order as specified on MDN
    * text-decoration shorthand hasn't been used deliberately because of its
    * messy support in web browsers */
+  /* stylelint-disable declaration-block-no-redundant-longhand-properties */
   a:link {
     color: var(--fg-link);
     text-decoration-line: underline;
@@ -368,6 +369,7 @@
     text-decoration-thickness: 1px;
     text-underline-offset: 0.25em;
   }
+  /* stylelint-enable declaration-block-no-redundant-longhand-properties */
 
   a:visited {
     color: var(--fg-link-visited);
