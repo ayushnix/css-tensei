@@ -382,6 +382,25 @@
     color: var(--fg-link-visited);
     text-decoration-color: var(--fg-link-visited);
   }
+
+  /* hyperlinks, preformatted text blocks, and summary element in <details>
+   * should get focus when performing keyboard navigation (they'll be
+   * overwritten later with :focus-visible if applicable)
+   *
+   * ideally, pre[tabindex] should've been styled instead of pre but I don't
+   * think static site generators generate pre[tabindex] when writing text in
+   * markup languages. in addition, firefox behaves much better than chromium
+   * in cases where text overflows horizontally in a preformatted text block.
+   * firefox allows focusing on pre and scrolling on it using keyboard
+   * navigation but chromium doesn't unless `tabindex=0` attribute is specified
+   * in <pre>
+   *
+   * audio and video elements should focus regardless of mouse or keyboard
+   * navigation */
+  :is(a, audio, pre, summary, video):focus {
+    border-radius: 0.25rem;
+    outline: solid 3px;
+  }
 }
 
 /* RULES THAT ARE COMMON TO BOTH SCREEN AND PRINT */
