@@ -64,7 +64,7 @@
    * the default light and dark theme try to have Lc >=90 for body text, Lc
    * >=90 for headings text, and Lc 40 for borders
    * if a lower contrast theme is selected, Lc is >=80 for body text, Lc >=75
-   * for headings, and Lc >=30 for borders
+   * for headings, and Lc >=30 for borders */
   --bg-main: #f8f8f8; /* white */
   --fg-text: #282828; /* black, Lc 97.4 */
   --fg-head: #3f3f3f; /* black, Lc 90.3, reduce contrast of headings to prevent halation */
