@@ -408,6 +408,22 @@
     border-radius: 0.25rem 0.25rem 0 0;
     outline: solid 3px;
   }
+
+  /* if a browser supports :focus-visible (most mainstream browsers should),
+   * use it instead of :focus
+   *
+   * the difference between :focus and :focus-visible, as far I understand it,
+   * is that :focus will show outlines when using both mouse and keyboard and
+   * :focus-visible will show outlines only when using keyboard navigation.
+   * :focus-visible may make sense on some elements like hyperlinks and
+   * horizontally overflowing preformatted code blocks but some elements, like
+   * input fields, audio and video elements, should always show an outline,
+   * regardless of the usage of mouse or keyboard */
+  @supports selector(:focus-visible) {
+    :is(a, pre, summary):focus:not(:focus-visible) {
+      outline: none;
+    }
+  }
 }
 
 /* RULES THAT ARE COMMON TO BOTH SCREEN AND PRINT */
