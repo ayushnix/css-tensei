@@ -462,4 +462,11 @@ dt {
     text-decoration-thickness: 1px;
     text-underline-offset: 3px;
   }
+
+  /* increase the inline padding and soft wrap the text inside <pre> if it
+   * overflows */
+  pre {
+    padding: 0.5rem 1rem;
+    white-space: pre-wrap;
+  }
 }
