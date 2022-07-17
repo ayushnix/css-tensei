@@ -401,6 +401,13 @@
     border-radius: 0.25rem;
     outline: solid 3px;
   }
+
+  /* this is needed to prevent summary from getting a border radius at the
+   * bottom left and bottom right when <details> is [open] */
+  :is(details[open] > summary):focus {
+    border-radius: 0.25rem 0.25rem 0 0;
+    outline: solid 3px;
+  }
 }
 
 /* RULES THAT ARE COMMON TO BOTH SCREEN AND PRINT */
