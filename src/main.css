@@ -435,6 +435,11 @@ var {
   font-family: var(--mono-font);
 }
 
+/* there's no need to give address an italic font */
+address {
+  font-style: normal;
+}
+
 /* if font-weight of 600 isn't available, a higher font weight (most likely
  * bold) should automatically be selected
  * to maintain visual consistency, add equivalent margin to dt even if a
