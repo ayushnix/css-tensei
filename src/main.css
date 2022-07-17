@@ -317,7 +317,8 @@
 
   /* remove the unnecessary inline margin from figure */
   figure {
-    margin-inline: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   /* differentiate a figcaption from regular body text */
