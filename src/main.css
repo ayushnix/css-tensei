@@ -437,6 +437,11 @@ dt {
   margin: 0.75rem;
 }
 
+var {
+  font-style: normal;
+  font-weight: 600;
+}
+
 /* remove the unnecessary inline margin from figure */
 figure {
   margin-left: 0;
