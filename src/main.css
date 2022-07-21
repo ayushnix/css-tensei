@@ -453,6 +453,36 @@ figcaption {
   text-align: center;
 }
 
+/* generic table rules shouldn't be applicable to tables inside <pre> element */
+:not(pre) table {
+  border: 1px solid var(--fg-border);
+  border-collapse: collapse;
+  /* add browser default margins to tables just to be safe */
+  margin-top: 1em;
+  margin-bottom: 1em;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* as of version 103, chromium messes up border width if font size or display
+ * has been scaled, firefox v101 and webkit epiphany works fine */
+:not(pre) table :is(td, th) {
+  border: 1px solid var(--fg-border);
+  padding: 0.25rem 0.5rem;
+}
+
+:not(pre) table th {
+  font-weight: 600;
+}
+
+:not(pre) table thead {
+  border-bottom: 3px solid var(--fg-border);
+}
+
+:not(pre) table tfoot {
+  border-top: 3px solid var(--fg-border);
+}
+
 /* OVERRIDES AND RULES THAT ARE SPECIFIC TO PRINT ONLY */
 @media print {
   html {
