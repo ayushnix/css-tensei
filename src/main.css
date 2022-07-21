@@ -306,18 +306,6 @@
     padding-right: 0.5rem;
   }
 
-  /* remove the unnecessary inline margin from figure */
-  figure {
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  /* differentiate a figcaption from regular body text */
-  figcaption {
-    font-style: italic;
-    text-align: center;
-  }
-
   mark {
     background-color: var(--bg-mark);
     color: var(--fg-mark);
@@ -447,6 +435,22 @@ address {
 dt {
   font-weight: 600;
   margin: 0.75rem;
+}
+
+/* remove the unnecessary inline margin from figure */
+figure {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* differentiate table captions and figcaptions from regular body text */
+table > caption,
+figcaption {
+  font-style: italic;
+}
+
+figcaption {
+  text-align: center;
 }
 
 /* OVERRIDES AND RULES THAT ARE SPECIFIC TO PRINT ONLY */
