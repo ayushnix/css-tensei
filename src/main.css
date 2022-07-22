@@ -509,6 +509,12 @@ figure > audio {
   width: 100%;
 }
 
+/* using abbr should be avoided because touch devices can't see the hover
+ * tooltip provided by abbr */
+abbr[title] {
+  text-underline-offset: 0.25em;
+}
+
 /* remove the unnecessary inline margin from figure */
 figure {
   margin-left: 0;
