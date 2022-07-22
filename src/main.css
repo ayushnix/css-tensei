@@ -474,6 +474,20 @@ h4 {
   line-height: var(--height-head);
 }
 
+/* don't italicize the entire blockquote text, insert an inline margin */
+blockquote {
+  border-left: 0.25rem solid var(--fg-border);
+  margin-left: 1rem;
+  margin-right: 0;
+  padding: 0.5rem;
+}
+
+/* keeping margins for <p> inside a blockquote messes things up */
+blockquote p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 /* remove the unnecessary inline margin from figure */
 figure {
   margin-left: 0;
