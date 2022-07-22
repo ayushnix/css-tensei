@@ -488,6 +488,27 @@ blockquote p {
   margin-bottom: 0;
 }
 
+/* images and videos shouldn't be wider than the maximum width of their parent
+ * block element */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* images should also have a thin border to differentiate them from
+ * background-color if their colors match
+ * however, borders won't be applied to videos because they are visible even
+ * when a video is in fullscreen mode which is annoying */
+img {
+  border: 1px solid var(--fg-border);
+}
+
+/* when a <audio> is inside a <figure>, extend its width to 100% */
+figure > audio {
+  width: 100%;
+}
+
 /* remove the unnecessary inline margin from figure */
 figure {
   margin-left: 0;
