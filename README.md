@@ -1,4 +1,4 @@
-# css-tensei (転生, reincarnation)
+# tensei.css (転生, reincarnation)
 
 css-tensei is a collection of CSS files that are meant to be used on static sites with a strong
 focus on text, readability, accessibility, and reducing distractions.
